@@ -1,0 +1,14 @@
+@mixin flexprop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin fontprop($param1) {
+    color: black;
+        // font-size: 5rem + 5rem;
+        font-size: $param1;
+        letter-spacing: 1.5rem;
+        text-transform: capitalize;
+}

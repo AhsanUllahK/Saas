@@ -1,0 +1,51 @@
+// scss ==> scc3
+// sass ==> css
+
+
+// 1: Operator
+// 2. Variables
+// 3. nesting(nested for loop concept he..)
+// 4. mixin ==> reusing of the same code.
+// 5.  passing parameters in mixin ==> like in function we pass parameters, multiple parameters are allowed.
+// 6. partials ==> her chx ka alag page bna k baad me include krna......
+
+
+@import "mixin";
+@import "var";
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+html{
+    font-size: 62.5%;       //62.5% == 10px
+}
+
+.main-header{
+    @include flexprop;
+    width: 100vw;
+    height: 100vw;   
+    background-color: $bgc;
+
+    h1{
+        @include fontprop(8rem);
+        &:hover{
+            color: aliceblue;
+        }
+        &::after{
+            content:  "  Iqbal Day";
+        }
+    }
+    
+    p{
+        @include fontprop(3rem);
+        &:hover{
+            color: aliceblue;
+        }
+    }
+    
+}
+
